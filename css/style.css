@@ -42,6 +42,7 @@ h1 {
 .photographer_section article h2 {
     color: #D3573C;
     font-size: 36px;
+    margin-bottom: 0.5rem;
 }
 
 .photographer_section article img {
@@ -49,4 +50,21 @@ h1 {
     width: 200px;
     border-radius: 10rem;
     object-fit: cover;
+}
+
+.photographer_section article h3{
+    color: #901C1C;
+    font-weight: normal;
+}
+
+.princing{
+    color: #757575;
+}
+
+.margin-small{
+    margin: 0.2rem;
+}
+
+.font-size-small{
+    font-size: 0.8rem;
 }
