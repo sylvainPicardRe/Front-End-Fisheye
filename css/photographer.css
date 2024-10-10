@@ -6,6 +6,33 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photograph-header img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10rem;
+    object-fit: cover;
+    order: 3;
+}
+
+.infosProfile h1
+{
+    color: #D3573C;
+    font-size: 36px;
+    margin-bottom: 0.5rem;
+    order: 1;
+}
+
+.city{
+    color: #901C1C;
+}
+
+.description{
+    color: #525252;
 }
 
 .contact_button {
@@ -19,6 +46,7 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+    order: 2
 }
 
 .modal {

@@ -37,5 +37,34 @@ function photographerTemplate(data) {
         article.appendChild(pricing);
         return (article);
     }
-    return { name, picture, getUserCardDOM }
+
+    function getUserProfileDOM(){
+        const div = document.createElement( 'div' );
+        div.setAttribute('class', "infosProfile");
+
+        const h1 = document.createElement( 'h1' );
+        h1.textContent = name;
+
+        const town = document.createElement( 'p' );
+        town.setAttribute("class", "city");
+        town.textContent = city + ", " + country;
+
+        const description = document.createElement( 'p' );
+        description.setAttribute("class", "description");
+        description.textContent = tagline;
+        
+        div.appendChild(h1);
+        div.appendChild(town);
+        div.appendChild(description);
+        return (div);
+    }
+
+    function getUserImageDOM(){
+        image = document.createElement( 'img' );
+        image.setAttribute("src", picture);
+        image.setAttribute("alt", "image de profile");
+        return image;
+    }
+    
+    return { name, picture, getUserCardDOM, getUserProfileDOM, getUserImageDOM}
 }
