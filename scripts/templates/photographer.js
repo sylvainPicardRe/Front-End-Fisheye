@@ -1,7 +1,6 @@
 function photographerTemplate(data) {
     const { id, name, portrait, city, country, tagline, price } = data;
-
-    const picture = `assets/photographers/${portrait}`;
+    const picture = `./assets/images/photographers/${portrait}`;
 
     const photographerLink = `photographer.html?id=${id}`;
 
