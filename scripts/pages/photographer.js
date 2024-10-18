@@ -18,23 +18,43 @@ async function getPhotographer() {
     return ({
         photographerDatas
     });
+
 }
 
-async function displayData(photographerDatas){
+async function getMedia(photographerId){
+    const reponse = await fetch(`./data/photographers.json`);
+    const result = await reponse.json();
+
+    const media = result.media.filter(media => media.photographerId === photographerId);
+    return media;
+}
+
+
+async function displayData(photographerDatas, medias){
     const photographerHeader = document.querySelector(".photograph-header");
     const photographerModel = photographerTemplate(photographerDatas);
-
+    
     const userProfileDOM = photographerModel.getUserProfileDOM();
     const userImageDOM = photographerModel.getUserImageDOM();
-
+    
     photographerHeader.appendChild(userProfileDOM);
     photographerHeader.appendChild(userImageDOM);
+    
+    const photographerMedia = document.querySelector(".photograph-media");
+    photographerMedia.innerHTML = '';
+    medias.forEach(media => {
+        const mediaModel = mediaTemplate(media);
+        const mediaCardDOM = mediaModel.getMediaCardDOM();
+        photographerMedia.appendChild(mediaCardDOM);  
+    });
+    
 
-}
+} 
 
 async function init() {
     const { photographerDatas } = await getPhotographer();
-    displayData(photographerDatas);
+    const medias = await getMedia(photographerId);
+    displayData(photographerDatas, medias);
 }
 
 init();

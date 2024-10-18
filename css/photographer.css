@@ -49,6 +49,34 @@
     order: 2
 }
 
+.photograph-media{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5rem; /* Espace entre les éléments */
+    padding: 5rem; /* Padding autour de la grille */
+}
+ 
+.photograph-media article img, .photograph-media article video{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-description{
+    display: flex;
+    justify-content: space-between;
+    color: #901C1C;
+    font-weight: 200;
+
+}
+
+.like{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+}
+
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
