@@ -1,5 +1,6 @@
 function mediaTemplate(data) {
     const { id, photographerId, title, image, video, likes, date, price } = data;
+
     const picture = `./assets/images/medias/${image}`;
     const videoSource = `./assets/images/medias/${video}`;
 
@@ -38,7 +39,7 @@ function mediaTemplate(data) {
 
         article.appendChild(div);
 
-        return (article);
+        return article;
     }
 
     return { picture, videoSource, getMediaCardDOM }
